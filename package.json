@@ -1,0 +1,28 @@
+{
+  "name": "gulp-playground",
+  "version": "1.0.0",
+  "description": "Workshop on Gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp",
+    "lint": "eslint **/*.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drochgenius/gulp-playground.git"
+  },
+  "keywords": [],
+  "author": "Dominique Rochefort <dominique.rochefort@hmhco.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drochgenius/gulp-playground/issues"
+  },
+  "homepage": "https://github.com/drochgenius/gulp-playground#readme",
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-hmh-mtl": "^1.7.2",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-types": "^1.0.2",
+    "gulp": "^3.9.1"
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "extends": "hmh-mtl",
+    "rules": {
+        "no-console": [0]
+    }
+}
