@@ -1,5 +1,7 @@
 const gulp = require('gulp');
 const { promisify } = require('util');
+require('gulp-graph')(gulp);
+
 
 const sleep = promisify(setTimeout);
 
