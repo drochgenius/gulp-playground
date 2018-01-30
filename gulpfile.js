@@ -3,37 +3,28 @@ const { promisify } = require('util');
 
 const sleep = promisify(setTimeout);
 
-
-const someArrayOfParams = [1, 2, 3, 4, 5, 6, 7, 8];
-
-gulp.task('init', () => {
-});
-
-gulp.task('A', ['init'], async () => {
+gulp.task('A', async () =>{
     await sleep(2000);
 });
 
-gulp.task('B', ['A'], async () => {
+gulp.task('B', async () =>{
     await sleep(1000);
 });
 
 
-someArrayOfParams.forEach(param => {
-    gulp.task(`C-${param}`, ['B'], async () => {
-        console.log('p', param);
-        await sleep(1500);
-    });
+gulp.task('C', async () =>{
+    await sleep(1500);
 });
 
 
-gulp.task('D', someArrayOfParams.map(p => `C-${p}`), async () => {
+gulp.task('D', async () =>{
     await sleep(500);
 });
 
 
-gulp.task('E', ['D'], async () => {
+gulp.task('E', async () =>{
     await sleep(100);
 });
 
 
-gulp.task('default', ['E']);
+gulp.task('default', ['A','B','C','D','E']);
